@@ -4,7 +4,7 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Project Overview](#-project-overview)
 - [Key Features](#-key-features)
@@ -19,21 +19,21 @@
 
 ---
 
-## 🎯 Project Overview
+## Project Overview
 
 This repository contains a **pure Python implementation** of the Composite Simpson's 1/3 Rule for numerical integration. The project demonstrates high-accuracy numerical quadrature **without external dependencies** by implementing all mathematical functions from first principles.
 
 ### What Makes This Special?
 
-- **🔬 Educational Focus**: Implements mathematical functions using Taylor/Maclaurin series expansions
-- **📦 Zero Dependencies**: No NumPy, SciPy, or math module required
-- **🎯 High Accuracy**: Achieves 4th-order global accuracy (O(h⁴))
-- **🛡️ Robust Parsing**: Handles various mathematical notations automatically
-- **📊 Comprehensive Testing**: Includes benchmark suite with known analytical solutions
+- ** Educational Focus**: Implements mathematical functions using Taylor/Maclaurin series expansions
+- ** Zero Dependencies**: No NumPy, SciPy, or math module required
+- ** High Accuracy**: Achieves 4th-order global accuracy (O(h⁴))
+- ** Robust Parsing**: Handles various mathematical notations automatically
+- ** Comprehensive Testing**: Includes benchmark suite with known analytical solutions
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 simpson-integral/
@@ -66,20 +66,20 @@ simpson-integral/
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 | Feature | Description |
 |---------|-------------|
-| **🔢 Library-Free Implementation** | All arithmetic and transcendental functions implemented from first principles |
-| **📝 Flexible Input** | Accepts functions as strings (e.g., `"exp(-x)*sin(x^3)"`) |
-| **🎯 Composite Simpson's 1/3** | Quadratic interpolation over even number of sub-intervals |
-| **🔧 Smart Parsing** | Auto-inserts multiplication, converts power notation, handles absolute values |
-| **📈 Benchmark Suite** | Six diverse test functions with known analytical solutions |
-| **🚀 Single File** | Complete implementation in `main.py` - ready to run on Python ≥3.8 |
+| ** Library-Free Implementation** | All arithmetic and transcendental functions implemented from first principles |
+| ** Flexible Input** | Accepts functions as strings (e.g., `"exp(-x)*sin(x^3)"`) |
+| ** Composite Simpson's 1/3** | Quadratic interpolation over even number of sub-intervals |
+| ** Smart Parsing** | Auto-inserts multiplication, converts power notation, handles absolute values |
+| ** Benchmark Suite** | Six diverse test functions with known analytical solutions |
+| ** Single File** | Complete implementation in `main.py` - ready to run on Python ≥3.8 |
 
 ---
 
-## 🧮 Mathematical Background
+##  Mathematical Background
 
 ### Simpson's 1/3 Rule
 
@@ -104,7 +104,7 @@ Where:
 
 ---
 
-## 🚀 Installation & Usage
+##  Installation & Usage
 
 ### Prerequisites
 
@@ -146,7 +146,7 @@ The approximate integral of f(x) from 0 to 3 is: 0.276956
 
 ---
 
-## 📚 Examples
+##  Examples
 
 ### Supported Function Notation
 
@@ -180,7 +180,7 @@ The approximate integral of f(x) from 0 to 3 is: 0.276956
 
 ---
 
-## 📊 Accuracy Benchmarks
+##  Accuracy Benchmarks
 
 The implementation has been tested against six benchmark functions with known analytical solutions:
 
@@ -239,13 +239,13 @@ def sqrt(x):
 
 ---
 
-## ⚠️ Limitations & Future Work
+##  Limitations & Future Work
 
 ### Current Limitations
 
-- **🔒 Security**: Uses `eval()` with restricted namespace; additional sandboxing recommended
-- **📏 Series Truncation**: Fixed-term Taylor series; adaptive truncation could improve extreme-value precision
-- **📐 Dimensionality**: Limited to 1D integrals; 2D/3D extensions require grid generation
+- ** Security**: Uses `eval()` with restricted namespace; additional sandboxing recommended
+- ** Series Truncation**: Fixed-term Taylor series; adaptive truncation could improve extreme-value precision
+- ** Dimensionality**: Limited to 1D integrals; 2D/3D extensions require grid generation
 
 ### Future Enhancements
 
@@ -257,7 +257,7 @@ def sqrt(x):
 
 ---
 
-## 📚 References
+## References
 
 ### Academic Sources
 
@@ -275,13 +275,13 @@ def sqrt(x):
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
