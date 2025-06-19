@@ -1,10 +1,10 @@
-#Numerical Integration with Composite Simpson's 1/3 Rule
+# Numerical Integration with Composite Simpson's 1/3 Rule
 
 > **Author:** Md. Arifuzzaman Munaf  
 
 ---
 
-##Table of Contents
+## Table of Contents
 
 - [Project Overview](#-project-overview)
 - [Key Features](#-key-features)
@@ -19,11 +19,11 @@
 
 ---
 
-##Project Overview
+## Project Overview
 
 This repository contains a **pure Python implementation** of the Composite Simpson's 1/3 Rule for numerical integration. The project demonstrates high-accuracy numerical quadrature **without external dependencies** by implementing all mathematical functions from first principles.
 
-###What Makes This Special?
+### What Makes This Special?
 
 - **Educational Focus**: Implements mathematical functions using Taylor/Maclaurin series expansions
 - **Zero Dependencies**: No NumPy, SciPy, or math module required
@@ -33,7 +33,7 @@ This repository contains a **pure Python implementation** of the Composite Simps
 
 ---
 
-##Repository Structure
+## Repository Structure
 
 ```
 simpson-integral/
@@ -55,7 +55,7 @@ simpson-integral/
 ```
 
 
-###Key Implementation Files
+### Key Implementation Files
 
 - **`main.py`** (11KB, 362 lines): Complete implementation including:
   - Mathematical function implementations (sin, cos, log, exp, sqrt, etc.)
@@ -66,7 +66,7 @@ simpson-integral/
 
 ---
 
-##Key Features
+## Key Features
 
 | Feature | Description |
 |---------|-------------|
@@ -79,9 +79,9 @@ simpson-integral/
 
 ---
 
-##Mathematical Background
+## Mathematical Background
 
-###Simpson's 1/3 Rule
+### Simpson's 1/3 Rule
 
 The Composite Simpson's 1/3 Rule approximates definite integrals using quadratic interpolation:
 
@@ -92,7 +92,7 @@ Where:
 - $n$ must be even
 - Global error: $O(h^4)$
 
-###Implemented Functions
+### Implemented Functions
 
 | Function | Implementation Method | Convergence |
 |----------|---------------------|-------------|
@@ -104,14 +104,14 @@ Where:
 
 ---
 
-##Installation & Usage
+## Installation & Usage
 
-###Prerequisites
+### Prerequisites
 
 - Python 3.8 or higher
 - No external dependencies required
 
-###Quick Start
+### Quick Start
 
 ```bash
 # Clone the repository
@@ -122,7 +122,7 @@ cd simpson-integral
 python main.py
 ```
 
-###Interactive Usage
+### Interactive Usage
 
 1. **Enter Function**: Type your mathematical function as a string
 2. **Set Limits**: Provide lower and upper integration limits
@@ -146,9 +146,9 @@ The approximate integral of f(x) from 0 to 3 is: 0.276956
 
 ---
 
-##Examples
+## Examples
 
-###Supported Function Notation
+### Supported Function Notation
 
 | Mathematical Notation | Python Input | Description |
 |----------------------|--------------|-------------|
@@ -159,7 +159,7 @@ The approximate integral of f(x) from 0 to 3 is: 0.276956
 | $\ln(x)$ | `log(x)` or `ln(x)` | Natural logarithm |
 | $e^x$ | `exp(x)` | Exponential function |
 
-###Example Functions
+### Example Functions
 
 ```python
 # Polynomial
@@ -180,7 +180,7 @@ The approximate integral of f(x) from 0 to 3 is: 0.276956
 
 ---
 
-##Accuracy Benchmarks
+## Accuracy Benchmarks
 
 The implementation has been tested against six benchmark functions with known analytical solutions:
 
@@ -197,25 +197,25 @@ The implementation has been tested against six benchmark functions with known an
 
 ---
 
-##Implementation Details
+## Implementation Details
 
-###Core Functions
+### Core Functions
 
-####`simpsons_rule(func_str, a, b, subdivisions=100)`
+#### `simpsons_rule(func_str, a, b, subdivisions=100)`
 Main integration function implementing Composite Simpson's 1/3 Rule.
 
-####`evaluate_function(func_str, x_value)`
+#### `evaluate_function(func_str, x_value)`
 Safely evaluates mathematical expressions using a restricted namespace.
 
-####`generalize_symbolic_expression(func_str)`
+#### `generalize_symbolic_expression(func_str)`
 Preprocesses user input to handle mathematical notation:
 - Converts `^` to `**`
 - Inserts implicit multiplication
 - Handles absolute value notation `|x|` → `abs(x)`
 
-###Mathematical Function Implementations
+### Mathematical Function Implementations
 
-####Trigonometric Functions
+#### Trigonometric Functions
 ```python
 def sin(x):
     """Taylor series: x - x³/3! + x⁵/5! - ..."""
@@ -224,14 +224,14 @@ def cos(x):
     """Taylor series: 1 - x²/2! + x⁴/4! - ..."""
 ```
 
-####Logarithmic Function
+#### Logarithmic Function
 ```python
 def log(x):
     """Series transformation: ln(x) = 2(u + u³/3 + u⁵/5 + ...)"""
     # where u = (x-1)/(x+1)
 ```
 
-####Square Root
+#### Square Root
 ```python
 def sqrt(x):
     """Newton-Raphson: x_{n+1} = (x_n + a/x_n)/2"""
@@ -239,15 +239,15 @@ def sqrt(x):
 
 ---
 
-##Limitations & Future Work
+## Limitations & Future Work
 
-###Current Limitations
+### Current Limitations
 
-- ** Security**: Uses `eval()` with restricted namespace; additional sandboxing recommended
-- ** Series Truncation**: Fixed-term Taylor series; adaptive truncation could improve extreme-value precision
-- ** Dimensionality**: Limited to 1D integrals; 2D/3D extensions require grid generation
+- **Security**: Uses `eval()` with restricted namespace; additional sandboxing recommended
+- **Series Truncation**: Fixed-term Taylor series; adaptive truncation could improve extreme-value precision
+- **Dimensionality**: Limited to 1D integrals; 2D/3D extensions require grid generation
 
-###Future Enhancements
+### Future Enhancements
 
 - [ ] **Adaptive Integration**: Automatic subdivision adjustment based on error estimates
 - [ ] **Higher Dimensions**: Extension to 2D Simpson's rule and Gaussian quadrature
@@ -257,9 +257,7 @@ def sqrt(x):
 
 ---
 
-##References
-
-###Academic Sources
+## References
 
 1. **Burden, R. L., & Faires, J. D.** (2011). *Numerical Analysis* (9th ed.). Brooks/Cole, Cengage Learning.
 
@@ -275,13 +273,13 @@ def sqrt(x):
 
 ---
 
-##License
+## License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-##Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
